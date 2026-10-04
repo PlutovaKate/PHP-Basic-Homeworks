@@ -7,26 +7,25 @@ class Movie extends MediaItem implements Downloadable
     private int $sizeMb;
 
     public function __construct(string $title, int $year, int $minutes, int $sizeMb)
-        {
-            parent::__construct($title, $year);
-            // parent::__construct() передаёт title и year из Book в MediaItem; 
-            // без него эти свойства (title и year) не будут инициализированы.
-            
-            $this->minutes=$minutes;
-            $this->sizeMb = $sizeMb;
+    {
+        parent::__construct($title, $year);
+        // parent::__construct() передаёт title и year из Book в MediaItem; 
+        // без него эти свойства (title и year) не будут инициализированы.
 
-        }
-  
+        $this->minutes = $minutes;
+        $this->sizeMb = $sizeMb;
+    }
+
     public function type(): string
-        {
+    {
         return 'Фильм ';
-        }
+    }
 
 
     public function duration(): string
-        {
+    {
         return $this->minutes . ' хв';
-        }
+    }
 
     public function sizeMb(): int
     {
@@ -35,8 +34,7 @@ class Movie extends MediaItem implements Downloadable
 
     public function download(): string
     {
-        if ($this->sizeMb > self::MAX_SIZE_MB)
-        {
+        if ($this->sizeMb > self::MAX_SIZE_MB) {
             return 'Файл завеликий: ' . $this->sizeMb . ' МБ, ліміт ' .  self::MAX_SIZE_MB . ' МБ';
         }
 

@@ -6,10 +6,8 @@ interface Downloadable
 
     // В интерфейсе нет тел методов, потому что он задаёт требования к классу,
     //  а реализацию этих методов пишет сам класс.
-    public function sizeMb(): int; 
+    public function sizeMb(): int;
     public function download(): string;
-
-
 }
 
 
