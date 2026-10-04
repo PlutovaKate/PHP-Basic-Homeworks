@@ -1,0 +1,7 @@
+services:
+  php:
+    build: .
+    ports:
+      - "81:80"
+    volumes:
+      - ./:/var/www/html
