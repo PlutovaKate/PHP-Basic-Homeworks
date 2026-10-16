@@ -1,0 +1,13 @@
+{
+  "name": "hillel/cafe",
+  "description": "ДЗ №7 — автозавантаження і PSR",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Cafe\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  }
+}
